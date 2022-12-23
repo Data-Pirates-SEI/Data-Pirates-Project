@@ -11,10 +11,10 @@
 ![LogIn](./aproject-pics/LogIn.png)
 ![home](./aproject-pics/home.png)
 ![addchores](./aproject-pics/home.png)
-![wireframe4](./aproject-pics/wireframe4.png)
-![wireframe5](./aproject-pics/wireframe5.png)
-![wireframe6](./aproject-pics/wireframe6.png)
-![wireframe7](./aproject-pics/wireframe7.png)
+![choredetail](./aproject-pics/choredetail.png)
+![chorelist](./aproject-pics/chorelist.png)
+![addsupplies](./aproject-pics/addsupplies.png)
+![supplieslist](./aproject-pics/supplieslist.png)
 
 
 ### Screenshots
@@ -31,7 +31,7 @@ HTML, CSS, Java Script, Python, PostGreSQL
 
 
 ### Getting Started
-
+https://trello.com/b/YZbyrwer/data-pirates-project-4
 
 
 ### Next Steps
