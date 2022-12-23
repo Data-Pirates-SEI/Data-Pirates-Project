@@ -14,7 +14,7 @@
 ![choredetail](./aproject-pics/choredetail.png)
 ![chorelist](./aproject-pics/chorelist.png)
 ![addsupplies](./aproject-pics/addsupplies.png)
-![supplieslist](./aproject-pics/supplieslist.png)
+![suplieslist](./aproject-pics/suplieslist.png)
 
 
 ### Screenshots
