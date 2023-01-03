@@ -17,4 +17,5 @@ urlpatterns = [
     path("supplies/create/", views.SupplyCreate.as_view(), name="supplies_create"),
     path("supplies/<int:pk>/update/", views.SupplyUpdate.as_view(), name="supplies_update"),
     path("supplies/<int:pk>/delete/", views.SupplyDelete.as_view(), name="supplies_delete"),
+    path('accounts/signup/', views.signup, name='signup')
 ]
