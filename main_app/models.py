@@ -7,7 +7,7 @@ from django.contrib.auth.models import User
 
 class Supply(models.Model):
     name = models.CharField(max_length=50)
-
+    qty = models.PositiveIntegerField(default=1)
     def __str__(self):
         return self.name
 
@@ -38,5 +38,3 @@ class Comment(models.Model):
     #     return f"{self.get_comment_display()} on {self.date}"
     class Meta:
         ordering = ['date']
-
-
