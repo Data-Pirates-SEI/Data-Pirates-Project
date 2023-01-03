@@ -1,0 +1,105 @@
+{% extends 'base.html' %} {% block content %}
+
+<h1>Chore Details</h1>
+
+<div class="row">
+  <div class="col s6">
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title">{{ chore.title }}</span>
+        <p>Details: {{ chore.details }}</p>
+        <p>Created by: {{ chore.creator }}</p>
+        <p>Assigned To: {{ chore.assignedTo }}</p>
+      </div>
+      <div class="card-action">
+        <a href="{% url 'chores_update' chore.id %}">Edit</a>
+        <a href="{% url 'chores_delete' chore.id %}">Delete</a>
+      </div>
+    </div>
+  </div>
+  <div class="col s6">
+    <form action="{% url 'add_comment' chore.id %}" method="POST">
+      {% csrf_token %} {{ comment_form.as_p }}
+      <input type="submit" class="btn" value="Add Comment" />
+    </form>
+    <table class="striped">
+      <thead>
+        <tr>
+          <th>Date</th>
+          <th>Author</th>
+          <th>Comment</th>
+        </tr>
+      </thead>
+      <tbody>
+        {% for comment in chore.comment_set.all %}
+        <tr>
+          <td>{{comment.date}}</td>
+          <td>{{comment.author}}</td>
+          <td>{{comment.comment}}</td>
+        </tr>
+        {% endfor %}
+      </tbody>
+    </table>
+  </div>
+</div>
+
+<hr />
+<div class="row">
+  <div class="col s6">
+    <h3>{{chore.title }} Supplies</h3>
+    {% if chore.supplies.count %} {% for supply in chore.supplies.all %}
+    <div class="card">
+        <div class="card-content">
+          <span class="card-title">
+            {{ supply.name }}
+          </span>
+        </div>
+        <div class="card-action">
+          <form action="{% url 'unassoc_supply' chore.id supply.id %}" method="POST">
+            {% csrf_token %}
+            <button type="submit" class="btn">Remove</button>
+          </form>
+        </div>
+      </div>
+    {% endfor %} {% else %}
+    <h5>No supplies added yet</h5>
+    {% endif %}
+  </div>
+  <!-- Available supplies will come after this line -->
+  <div class="col s6">
+    <h3>Available Supplies</h3>
+    {% if supplies.count %} {% for supply in supplies.all %}
+    <div class="card">
+      <div class="card-content">
+        <span class="card-title"> {{ supply.name }} </span>
+      </div>
+      <div class="card-action">
+        <form
+          action="{% url 'assoc_supply' chore.id supply.id %}"
+          method="POST"
+        >
+          {% csrf_token %}
+          <button type="submit" class="btn">Add</button>
+        </form>
+      </div>
+    </div>
+    {% endfor %} {% else %}
+    <h5>{{chore.name}} Already Has All supplies Available</h5>
+    {% endif %}
+  </div>
+</div>
+
+<script>
+  const dateEl = document.getElementById("id_date");
+  M.Datepicker.init(dateEl, {
+    format: "yyyy-mm-dd",
+    defaultDate: new Date(),
+    setDefaultDate: true,
+    autoClose: true,
+  });
+
+  const selectEl = document.getElementById("id_comment");
+  M.FormSelect.init(selectEl);
+</script>
+
+{% endblock %}
