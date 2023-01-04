@@ -30,7 +30,7 @@ class Chore(models.Model):
     
 class Comment(models.Model):
     date = models.DateField('comment date')
-    user = models.ForeignKey(User, editable=False, on_delete=models.CASCADE)
+    author = models.TextField(max_length=25, default='Type your name here',  )
     comment = models.TextField(max_length=300, default = 'Enter Comment Here')
     chore = models.ForeignKey(Chore, on_delete=models.CASCADE)
 
