@@ -76,7 +76,7 @@ class SupplyCreate(LoginRequiredMixin, CreateView):
 
 class SupplyUpdate(LoginRequiredMixin, UpdateView):
   model = Supply
-  fields = ['name']
+  fields = ['name', 'qty']
 
 class SupplyDelete(LoginRequiredMixin, DeleteView):
   model = Supply
