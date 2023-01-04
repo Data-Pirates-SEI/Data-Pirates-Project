@@ -20,7 +20,7 @@
   <div class="col s6">
     <form action="{% url 'add_comment' chore.id %}" method="POST">
       {% csrf_token %} {{ comment_form.as_p }}
-      <input type="submit" class="btn" value="Add Comment" />
+      <input type="submit" class="btn deep-purple accent-2" value="Add Comment" />
     </form>
     <table class="striped">
       <thead>
@@ -57,7 +57,7 @@
         <div class="card-action">
           <form action="{% url 'unassoc_supply' chore.id supply.id %}" method="POST">
             {% csrf_token %}
-            <button type="submit" class="btn">Remove</button>
+            <button type="submit" class="btn deep-purple accent-2">Remove</button>
           </form>
         </div>
       </div>
@@ -80,7 +80,7 @@
           method="POST"
         >
           {% csrf_token %}
-          <button type="submit" class="btn">Add</button>
+          <button type="submit" class="btn deep-purple accent-2">Add</button>
         </form>
       </div>
     </div>

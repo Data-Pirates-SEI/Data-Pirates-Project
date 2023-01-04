@@ -60,6 +60,7 @@ def add_comment(request, chore_id):
   if form.is_valid():
     new_comment = form.save(commit=False)
     new_comment.chore_id = chore_id
+    # new_comment.user_id = user_id
     new_comment.save()
   return redirect('detail', chore_id=chore_id)
 

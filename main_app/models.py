@@ -15,8 +15,8 @@ class Supply(models.Model):
         return reverse('supplies_detail', kwargs={'pk': self.id})
 
 class Chore(models.Model):
-    title=models.CharField(max_length=100)
-    creator=models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    creator = models.CharField(max_length=100)
     assignedTo = models.CharField(max_length=100)
     details = models.TextField(max_length=250)
     supplies = models.ManyToManyField(Supply)
@@ -30,12 +30,13 @@ class Chore(models.Model):
     
 class Comment(models.Model):
     date = models.DateField('comment date')
-    author = models.CharField(max_length=100)
+    author = models.TextField(max_length=25, default='Type your name here',  )
     comment = models.TextField(max_length=300, default = 'Enter Comment Here')
     chore = models.ForeignKey(Chore, on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return f"{self.get_comment_display()} on {self.date}"
+
+
+
     class Meta:
         ordering = ['date']
 
