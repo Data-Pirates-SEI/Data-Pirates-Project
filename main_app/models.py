@@ -30,12 +30,13 @@ class Chore(models.Model):
     
 class Comment(models.Model):
     date = models.DateField('comment date')
-    author = models.CharField(max_length=100)
+    # user = models.ForeignKey(User, editable=False, on_delete=models.CASCADE)
     comment = models.TextField(max_length=300, default = 'Enter Comment Here')
     chore = models.ForeignKey(Chore, on_delete=models.CASCADE)
 
-    # def __str__(self):
-    #     return f"{self.get_comment_display()} on {self.date}"
+
+
+
     class Meta:
         ordering = ['date']
 
