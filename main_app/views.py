@@ -55,11 +55,12 @@ class ChoreDelete(LoginRequiredMixin, DeleteView):
   success_url = '/chores/'
 
 @login_required
-def add_comment(request, chore_id):
+def add_comment(request, chore_id, user_id):
   form = CommentForm(request.POST)
   if form.is_valid():
     new_comment = form.save(commit=False)
     new_comment.chore_id = chore_id
+    new_comment.user_id = user_id
     new_comment.save()
   return redirect('detail', chore_id=chore_id)
 

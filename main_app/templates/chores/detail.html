@@ -34,7 +34,7 @@
         {% for comment in chore.comment_set.all %}
         <tr>
           <td>{{comment.date}}</td>
-          <td>{{comment.author.id}}</td>
+          <td>{{comment.user}}</td>
           <td>{{comment.comment}}</td>
         </tr>
         {% endfor %}
