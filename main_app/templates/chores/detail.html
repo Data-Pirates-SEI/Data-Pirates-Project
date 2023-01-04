@@ -50,9 +50,9 @@
     {% if chore.supplies.count %} {% for supply in chore.supplies.all %}
     <div class="card">
         <div class="card-content">
-          <span class="card-title">
-            {{ supply.name }}
-          </span>
+          <span class="card-title">{{ supply.name }}</span>
+          <span class=''>Quantity: {{ supply.qty }}</span>
+          
         </div>
         <div class="card-action">
           <form action="{% url 'unassoc_supply' chore.id supply.id %}" method="POST">
@@ -72,6 +72,7 @@
     <div class="card">
       <div class="card-content">
         <span class="card-title"> {{ supply.name }} </span>
+        <span class=''>Quantity: {{ supply.qty }} </span>
       </div>
       <div class="card-action">
         <form
