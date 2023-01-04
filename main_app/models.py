@@ -15,8 +15,8 @@ class Supply(models.Model):
         return reverse('supplies_detail', kwargs={'pk': self.id})
 
 class Chore(models.Model):
-    title=models.CharField(max_length=100)
-    creator=models.CharField(max_length=100)
+    title = models.CharField(max_length=100)
+    creator = models.CharField(max_length=100)
     assignedTo = models.CharField(max_length=100)
     details = models.TextField(max_length=250)
     supplies = models.ManyToManyField(Supply)
