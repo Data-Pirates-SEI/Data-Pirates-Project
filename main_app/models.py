@@ -7,13 +7,7 @@ from django.contrib.auth.models import User
 
 class Supply(models.Model):
     name = models.CharField(max_length=50)
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
-    
->>>>>>> 3ace633 (remove quantity and adding button icons)
-=======
->>>>>>> 265dffb (migrations)
+    qty = models.PositiveIntegerField(default=0, null=True)
     def __str__(self):
         return self.name
 
