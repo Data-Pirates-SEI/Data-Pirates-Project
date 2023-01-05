@@ -24,7 +24,6 @@
     </form>
     <div
       style="
-        {% comment %} width: 400px; {% endcomment %}
         height: 250px;
         overflow-y: scroll;
         scrollbar-color: rebeccapurple green;
@@ -60,7 +59,7 @@
     <h3>{{chore.title }} Supplies</h3>
     {% if chore.supplies.count %} {% for supply in chore.supplies.all %}
     <div class="card">
-        <div class="card-content">
+        <div class="card-content deep-purple lighten-2 white-text">
           <span class="card-title">{{ supply.name }}</span>
           
           
@@ -68,7 +67,7 @@
         <div class="card-action">
           <form action="{% url 'unassoc_supply' chore.id supply.id %}" method="POST">
             {% csrf_token %}
-            <a class="waves-effect waves-light deep-purple accent-2 btn"><i class="material-icons left">remove</i>Remove</a>
+            <button type="submit" class="btn deep-purple accent-2">Remove</button>
           </form>
         </div>
       </div>
@@ -80,8 +79,8 @@
   <div class="col s6">
     <h3>Available Supplies</h3>
     {% if supplies.count %} {% for supply in supplies.all %}
-    <div class="card">
-      <div class="card-content">
+    <div class="card ">
+      <div class="card-content deep-purple lighten-2 white-text">
         <span class="card-title"> {{ supply.name }} </span>
         
       </div>
@@ -91,7 +90,7 @@
           method="POST"
         >
           {% csrf_token %}
-          <a class="waves-effect waves-light deep-purple accent-2 btn"><i class="material-icons left">add</i>Add</a>
+          <button type="submit" class="btn deep-purple accent-2">Add</button>
         </form>
       </div>
     </div>
