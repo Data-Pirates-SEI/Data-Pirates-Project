@@ -29,7 +29,7 @@ class Chore(models.Model):
         return reverse("detail", kwargs={"chore_id": self.id})
     
 class Comment(models.Model):
-    date = models.DateField('comment date')
+    date = models.DateField('chore date')
     author = models.TextField(max_length=25, default='Type your name here',  )
     comment = models.TextField(max_length=300, default = 'Enter Comment Here')
     chore = models.ForeignKey(Chore, on_delete=models.CASCADE)
@@ -38,6 +38,6 @@ class Comment(models.Model):
 
 
     class Meta:
-        ordering = ['date']
+        ordering = ['-date']
 
 
