@@ -8,13 +8,10 @@ from django.contrib.auth.models import User
 class Supply(models.Model):
     name = models.CharField(max_length=50)
 <<<<<<< HEAD
-    
-=======
 <<<<<<< HEAD
 =======
     
 >>>>>>> 3ace633 (remove quantity and adding button icons)
->>>>>>> 177fd0c (remove quantity and adding button icons)
     def __str__(self):
         return self.name
 
