@@ -27,7 +27,7 @@
 
 
 ### Technologies Used
-HTML, CSS, Java Script, Python, PostGreSQL
+HTML, CSS, Java Script, Python, PostGreSQL, Materialize
 
 
 ### Getting Started
