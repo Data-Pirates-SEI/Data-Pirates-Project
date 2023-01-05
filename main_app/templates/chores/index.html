@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+{% block content %}
+
+<h1>Chore List</h1>
+
+{% for chore in chores %}
+  <div class="card">
+    <a href="{% url 'detail' chore.id %}">
+    <div class="card-content">
+      <span class="card-title">{{ chore.title }}</span>
+      <p>Details: {{ chore.details }}</p>
+      <p>Created by: {{ chore.creator }}</p>
+      <p>Assigned To: {{ chore.assignedTo }}</p>
+      
+      
+    </div>
+  </a>
+  </div>
+{% endfor %}
+
+{% endblock %}
