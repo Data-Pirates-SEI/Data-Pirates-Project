@@ -7,6 +7,7 @@ from django.contrib.auth.models import User
 
 class Supply(models.Model):
     name = models.CharField(max_length=50)
+
     def __str__(self):
         return self.name
 
@@ -32,8 +33,6 @@ class Comment(models.Model):
     author = models.TextField(max_length=25, default='Type your name here',  )
     comment = models.TextField(max_length=300, default = 'Enter Comment Here')
     chore = models.ForeignKey(Chore, on_delete=models.CASCADE)
-
-
 
 
     class Meta:
