@@ -57,7 +57,7 @@
         <div class="card-action">
           <form action="{% url 'unassoc_supply' chore.id supply.id %}" method="POST">
             {% csrf_token %}
-            <a class="waves-effect waves-light btn"><i class="material-icons left">cloud</i>button</a>
+            <a class="waves-effect waves-light deep-purple accent-2 btn"><i class="material-icons left">remove</i>Remove</a>
           </form>
         </div>
       </div>
@@ -80,7 +80,7 @@
           method="POST"
         >
           {% csrf_token %}
-          <button type="submit" class="btn deep-purple accent-2">Add</button>
+          <a class="waves-effect waves-light deep-purple accent-2 btn"><i class="material-icons left">add</i>Add</a>
         </form>
       </div>
     </div>
