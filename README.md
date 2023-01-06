@@ -7,17 +7,17 @@ We made this app to keep track of the various chores someone will have. It allow
 ![supplylist](./aproject-pics/supplylist.png)
 ![chorelist](./aproject-pics/chorelist.png)
 ![choredetail](./aproject-pics/choredetail.png)
-![login](./aproject-pics/login.png)
+![login](./aproject-pics/log.png)
 
 
 ### Technologies Used
 - HTML
 - CSS 
--Java 
--Script
--Python 
--PostGreSQL 
--Materialize
+- Java 
+- Script
+- Python 
+- PostGreSQL 
+- Materialize
 
 
 ### Getting Started
