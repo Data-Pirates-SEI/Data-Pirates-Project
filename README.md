@@ -22,7 +22,7 @@ We made this app to keep track of the various chores someone will have. It allow
 
 ### Getting Started
 https://trello.com/b/YZbyrwer/data-pirates-project-4
-Deployment link goes here!!!
+https://gentle-brushlands-78744.herokuapp.com/
 
 ### Next Steps
 For one of our strech goals we would like to have a favorite cleanning supplies and most common chore ticker on the home page.
