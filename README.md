@@ -9,6 +9,8 @@ We made this app to keep track of the various chores someone will have. It allow
 ![choredetail](./aproject-pics/choredetail.png)
 ![login](./aproject-pics/log.png)
 
+![ERD](aproject-pics/ERD.png)
+
 
 ### Technologies Used
 - HTML
