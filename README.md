@@ -1,6 +1,16 @@
 # Chore Tracker
 We made this app to keep track of the various chores someone will have. It allows you to add supplies you will be using on the task. 
 
+## Created by:
+
+Evan Dunn
+
+James Hubbell
+
+Mikee Maralit
+
+Ahmad Mahmoud
+
 
 ### Screenshots
 ![about](./aproject-pics/about.png)
