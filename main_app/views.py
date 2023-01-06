@@ -40,11 +40,11 @@ class ChoreCreate(LoginRequiredMixin, CreateView):
 
 
   def form_valid(self, form):
-    # Assign the logged in user (self.request.user)
-    form.instance.user = self.request.user  # form.instance is the cat
-    # Let the CreateView do its job as usual
+    
+    form.instance.user = self.request.user  
+    
     return super().form_valid(form)
-  # success_url = '/chores/'
+  
 
 class ChoreUpdate(LoginRequiredMixin, UpdateView):
   model = Chore
@@ -84,7 +84,7 @@ class SupplyDelete(LoginRequiredMixin, DeleteView):
 
 @login_required
 def assoc_supply(request, chore_id, supply_id):
-  # Note that you can pass a toy's id instead of the whole toy object
+  
   Chore.objects.get(id=chore_id).supplies.add(supply_id)
   return redirect('detail', chore_id=chore_id)
 
