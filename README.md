@@ -25,8 +25,7 @@ Ahmad Mahmoud
 ### Technologies Used
 - HTML
 - CSS 
-- Java 
-- Script
+- Java Script
 - Python 
 - PostGreSQL 
 - Materialize
@@ -39,5 +38,5 @@ https://trello.com/b/YZbyrwer/data-pirates-project-4
 https://gentle-brushlands-78744.herokuapp.com/
 
 ### Next Steps
-For one of our strech goals we would like to have a favorite cleanning supplies and most common chore ticker on the home page.
+For one of our strech goals we would like to have a favorite cleaning supplies and most common chore ticker on the home page.
 Another stretch goal we have is implimenting the ability to track quantities of cleaning supplies, while being able to add or subtract from the count.
